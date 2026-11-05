@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 03 | Interactive Slideshow</title>
+    <link rel="stylesheet" href="assignment3j.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <img src="logo.jpg" alt="Centennial College Logo" class="logo">
+        <div class="header-text">
+            <h2>COMP125 Assignment 3</h2>
+            <p>Interactive Slideshow with Favorites</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-badge">Photo Viewer Project</div>
+            <h1>Interactive Slideshow</h1>
+            <p class="intro">
+                Explore the gallery, open images in full view, and save your top picks in a favorites section using DOM functionality.
+            </p>
+        </section>
+
+        <section class="instructions-card">
+            <h3>How to Use</h3>
+            <ul>
+                <li>Click the left and right arrows to move through the gallery.</li>
+                <li>Click the play button to start or pause automatic slideshow mode.</li>
+                <li>Click any image to open it in full-size view.</li>
+                <li>Use the Add to Favorites button in the lightbox window.</li>
+                <li>A maximum of 5 images can be saved in favorites.</li>
+            </ul>
+        </section>
+
+        <section class="slideshow-section">
+            <div class="section-heading">
+                <h2>Photo Gallery</h2>
+                <p>Browse featured images with interactive controls</p>
+            </div>
+
+            <div class="gallery-wrapper">
+                <button id="leftBtn" class="nav-btn" aria-label="Previous image">&#10094;</button>
+
+                <div id="slides" class="slides"></div>
+
+                <button id="playPauseBtn" class="play-btn" aria-label="Play or pause slideshow">&#9658;</button>
+
+                <button id="rightBtn" class="nav-btn" aria-label="Next image">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="favorites-section">
+            <div class="section-heading">
+                <h2>Favorites</h2>
+                <p>Your selected images will appear below</p>
+            </div>
+
+            <div id="favoritesContainer" class="favorites-container"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Janet Adetoun Adewusi </p>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span id="closeLightbox" class="close-btn">&times;</span>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Full size photo">
+            <div class="lightbox-actions">
+                <button id="addFavoriteBtn">Add to Favorites</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assignment3j.js"></script>
+</body>
+</html>
